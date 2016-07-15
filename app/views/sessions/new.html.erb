@@ -1,5 +1,9 @@
 <div class="box">
-  <h2 class="box-title">ログイン</h2>
+  <% provide :title, 'ログイン' %>
+  <% content_for :head do %>
+    <meta name="description" content="素敵なモノと出会える場所。楽天でお買い物し
+  ませんか？ログインして楽天市場を覗いてみましょう。">
+  <% end %>
   <div class="box-inner">
     <%= form_for(:session, url: login_path) do |f| %>
       <div class="form-group">
