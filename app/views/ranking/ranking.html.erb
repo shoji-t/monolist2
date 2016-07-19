@@ -1,0 +1,8 @@
+<h1><%= @title %></h1>
+
+<% @items.each.with_index(1) do | item, index | %>
+  <div class="item-box">
+    <%= render partial: 'items/item_img' , locals: {item: item, index: index } %>
+  </div>
+<% end %>
+
