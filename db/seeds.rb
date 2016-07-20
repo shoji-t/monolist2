@@ -70,6 +70,25 @@ item_ids = [5, 1, 2, 8, 3, 9, 10, 11, 4, 6, 7, 12]
 end
 user13.have(Item.find(3))
 
+#1位(12) はじめてのBootstrap [ 槇俊明 ]
+#2位(11) パーフェクトRuby　on　Rails [ すがわらまさのり ]
+#3位(10) Ruby　on　Rails　4アプリケーションプログラミング／山田祥寛【2500円以上送料無料】
+#4位(9) 基礎Ruby　on　Rails改訂3版 [ 黒田努 ]
+#4位(9) 実践Ruby on Rails 4 機能拡張編【電子書籍】[ 黒田 努 ]
+#6位(7) Rubyによるクローラー開発技法巡回・解析機能の実装と21の運用例【電子書籍】[ るびきち ]
+#7位(6) 実践Ruby on Rails 4 現場のプロから学ぶ本格Webプログラミング【電子書籍】[ 黒田 努 ]
+#8位(5) パーフェクトRuby on Rails【電子書籍】[ すがわらまさのり ]
+#9位(4) Bootstrapファーストガイド [ 相澤裕介 ]
+#10位(3) パーフェクトRuby【電子書籍】[ Rubyサポーターズ ]
+
+item_ids = [5, 1, 2, 8, 3, 9, 10, 11, 4, 6, 7, 12]
+1.upto(12) do |user_id|
+  item_ids.each do |item_id|
+    eval("user#{user_id}").want(Item.find(item_id))
+  end
+  item_ids.pop
+end
+user13.want(Item.find(3))
 
 #1位(12) はじめてのBootstrap [ 槇俊明 ]
 #2位(11) パーフェクトRuby　on　Rails [ すがわらまさのり ]

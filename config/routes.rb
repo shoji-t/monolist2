@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'ranking/have'
+
+  get 'ranking/want'
+
   root 'welcome#index'
 
   get    'signup', to: 'users#new'
   get    'login' , to: 'sessions#new'
   post   'login' , to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
-  get 'ranking/want'
-  get 'ranking/have'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
